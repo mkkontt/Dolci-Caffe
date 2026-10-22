@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     iniciarValidacionFormulario();
 });
 
-// 1. Evento 'input' para contar los caracteres de la descripción
 function iniciarContadorCaracteres() {
     const textarea = document.getElementById("descripcion");
     const contador = document.getElementById("contadorCaracteres");
@@ -15,11 +14,10 @@ function iniciarContadorCaracteres() {
     textarea.addEventListener("input", function () {
         const longitudActual = this.value.length;
         const limiteMaximo = this.getAttribute("maxlength") || 200;
-        
-        // Modificación del DOM para actualizar el contador
+
         contador.textContent = `Caracteres: ${longitudActual} / ${limiteMaximo}`;
 
-        // Alerta visual al acercarse al límite
+
         if (longitudActual >= limiteMaximo) {
             contador.style.color = "red";
         } else {
@@ -28,27 +26,25 @@ function iniciarContadorCaracteres() {
     });
 }
 
-// 2. Evento 'submit', validaciones y almacenamiento en localStorage
 function iniciarValidacionFormulario() {
     const formulario = document.getElementById("formularioContacto");
 
     if (!formulario) return;
 
     formulario.addEventListener("submit", function (evento) {
-        evento.preventDefault(); // Detener el envío estándar del formulario
+        evento.preventDefault(); 
 
-        // Obtención de elementos del DOM
         const nombre = document.getElementById("nombre");
         const correo = document.getElementById("correo");
         const telefono = document.getElementById("telefono");
         const descripcion = document.getElementById("descripcion");
 
-        // Expresión regular para validar formato básico de correo
+
         const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         let esValido = true;
 
-        // Validar campos obligatorios
+
         [nombre, correo, telefono, descripcion].forEach(function (campo) {
             if (campo.value.trim() === "") {
                 campo.style.borderColor = "red";
@@ -63,14 +59,13 @@ function iniciarValidacionFormulario() {
             return;
         }
 
-        // Validar formato de correo
+        // Validar formato
         if (!regexEmail.test(correo.value.trim())) {
             alert("Por favor, ingresa un correo electrónico válido.");
             correo.style.borderColor = "red";
             return;
         }
 
-        // Construir objeto de la solicitud
         const nuevaSolicitud = {
             nombre: nombre.value.trim(),
             correo: correo.value.trim(),
@@ -98,7 +93,6 @@ function iniciarValidacionFormulario() {
         document.getElementById("contadorCaracteres").textContent = "Caracteres: 0 / 200";
     });
 
-    // Resetear colores al presionar el botón de limpiar
     formulario.addEventListener("reset", function () {
         const campos = formulario.querySelectorAll("input, textarea");
         campos.forEach(campo => campo.style.borderColor = "");

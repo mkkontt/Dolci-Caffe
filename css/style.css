@@ -1,4 +1,3 @@
-/* Reset general del Modelo de Caja */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -90,7 +89,7 @@ section h2 {
     flex: 1 1 300px;
 }
 
-/* Tabla del Menú */
+/* Tabla del menú */
 .tabla-menu {
     width: 100%;
     border-collapse: collapse;
@@ -125,7 +124,7 @@ section h2 {
     overflow: hidden;
 }
 
-/* Formulario de Contacto */
+/* Formulario de contacto */
 form div {
     margin-bottom: 1.2rem;
 }
@@ -209,7 +208,6 @@ footer h3 {
     font-weight: normal;
 }
 
-/* Diseño Responsivo (Pantallas pequeñas / Móviles) */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;

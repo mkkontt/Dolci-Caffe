@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4efe8;
+    color: #3e2723;
+}
+
+/* Encabezado */
+header {
+    background-color: #4e342e;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Navegación */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #3e2723;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #f4efe8;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #d7ccc8;
+    color: #3e2723;
+}
+
+/* Contenido Principal */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #4e342e;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #8d6e63;
+    padding-bottom: 0.5rem;
+}
+
+/* Sección Nosotros */
+.nosotros-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nosotros-container img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #8d6e63;
+}
+
+.nosotros-container p {
+    flex: 1 1 300px;
+}
+
+/* Tabla del menú */
+.tabla-menu {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.tabla-menu th, .tabla-menu td {
+    border: 1px solid #d7ccc8;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.tabla-menu th {
+    background-color: #8d6e63;
+    color: #ffffff;
+}
+
+.tabla-menu tr:nth-child(even) {
+    background-color: #fbe9e7;
+}
+
+/* Lista del Horario */
+#Horario ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.mapa-container {
+    margin-top: 1rem;
+    border: 2px solid #8d6e63;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Formulario de contacto */
+form div {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: #4e342e;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #8d6e63;
+    box-shadow: 0 0 5px rgba(141, 110, 99, 0.5);
+}
+
+#contadorCaracteres {
+    font-size: 0.85rem;
+    color: #666;
+    text-align: right;
+    margin-top: 0.2rem;
+}
+
+.botones {
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"] {
+    background-color: #4e342e;
+    color: #ffffff;
+}
+
+button[type="submit"]:hover {
+    background-color: #3e2723;
+}
+
+button[type="reset"] {
+    background-color: #cccccc;
+    color: #333333;
+}
+
+button[type="reset"]:hover {
+    background-color: #bbb;
+}
+
+/* Pie de página */
+footer {
+    background-color: #3e2723;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer h3 {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nosotros-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nosotros-container img {
+        max-width: 100%;
+    }
+}

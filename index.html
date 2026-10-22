@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dolci & Caffè - Tu cafetería de especialidad con el mejor ambiente y repostería artesanal.">
+    <meta name="keywords" content="cafetería, café, repostería, horario, contacto, café de especialidad">
+    <meta name="author" content="Dolci & Caffè">
+    
+    <title>Dolci & Caffè - Cafetería de Especialidad</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Dolci & Caffè</h1>
+        <p>El lugar perfecto para tus mejores momentos</p>
+    </header>
+
+    <nav>
+        <a href="#Nosotros">Nosotros</a>
+        <a href="#Menu">Menú</a>
+        <a href="#Horario">Horario</a>
+        <a href="#Contacto">Contacto</a>
+    </nav>
+
+    <main>
+        <!-- Sección Nosotros -->
+        <section id="Nosotros">
+            <h2>Sobre Nosotros</h2>
+            <div class="nosotros-container">
+                <img src="img/local.png" alt="Imagen del local de Dolci & Caffè">
+                <p>En <strong>Dolci & Caffè</strong> nos apasiona ofrecer café de especialidad preparado por baristas expertos. Seleccionamos cuidadosamente los granos de los mejores orígenes para brindarte una experiencia inolvidable acompañada de exquisita repostería artesanal.</p>
+            </div>
+        </section>
+
+        <!-- Sección Menú / Servicios -->
+        <section id="Menu">
+            <h2>Nuestro Menú</h2>
+            <p>Descubre nuestras especialidades destacadas:</p>
+            
+            <table class="tabla-menu">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Café Espresso</td>
+                        <td>Extracción concentrada de granos seleccionados.</td>
+                        <td>$45.00</td>
+                    </tr>
+                    <tr>
+                        <td>Cappuccino Clásico</td>
+                        <td>Espresso, leche al vapor y suave espuma de leche.</td>
+                        <td>$60.00</td>
+                    </tr>
+                    <tr>
+                        <td>Latte Arte</td>
+                        <td>Espresso suave con leche cremada y diseño barista.</td>
+                        <td>$65.00</td>
+                    </tr>
+                    <tr>
+                        <td>Pastel de Zanahoria</td>
+                        <td>Rebanada de pastel artesanal con cobertura de queso crema.</td>
+                        <td>$55.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección Horario y Ubicación -->
+        <section id="Horario">
+            <h2>Horario y Ubicación</h2>
+            <p><strong>Nuestros Horarios de Atención:</strong></p>
+            <ul>
+                <li><strong>Lunes a Viernes:</strong> 7:00 AM - 9:00 PM</li>
+                <li><strong>Sábados:</strong> 8:00 AM - 10:00 PM</li>
+                <li><strong>Domingos:</strong> 8:00 AM - 8:00 PM</li>
+            </ul>
+
+            <p><strong>Visítanos en:</strong></p>
+            <!-- Objeto embebido: Mapa con marcador -->
+            <div class="mapa-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.7371583021966!2d-106.4350!3d31.6900!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDQxJzI0LjAiTiAxMDbDwrAyNicwNi4wIlc!5e0!3m2!1ses!2smx!4v1620000000000!5m2!1ses!2smx" 
+                    width="100%" 
+                    height="300" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="Contacto">
+            <h2>Contacto</h2>
+            <p>Escríbenos tu mensaje, duda o solicitud de reservación:</p>
+
+            <form id="formularioContacto">
+                <div>
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+                </div>
+
+                <div>
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div>
+                    <label for="telefono">Teléfono de contacto:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="6561234567" required>
+                </div>
+
+                <div>
+                    <label for="descripcion">Descripción del problema o mensaje:</label>
+                    <textarea id="descripcion" name="descripcion" placeholder="Escribe aquí tu consulta o reservación" maxlength="200" required></textarea>
+                    <div id="contadorCaracteres">Caracteres: 0 / 200</div>
+                </div>
+
+                <div class="botones">
+                    <button type="submit">Enviar mensaje</button>
+                    <button type="reset">Limpiar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <h3>© 2026 Dolci & Caffè. Todos los derechos reservados.</h3>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
